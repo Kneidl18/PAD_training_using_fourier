@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image_processing"
+version = "1.0.0"
+description = "Image Processing - Fourier Extraction"
+authors = [
+  { name = "Andreas Auer", email = "andreas.auer@stud.plus.ac.at" },
+  { name = "Philipp Fuchs", email = "philipp.fuchs@stud.plus.ac.at" },
+  { name = "Sarah Götz", email = "sarah.goetz@stud.plus.ac.at" }
+]
+requires-python = ">=3.8"
+
+dependencies = [
+  "opencv-python-headless",
+  "scikit-learn",
+  "numpy",
+  "matplotlib",
+  "seaborn",
+  "scikit-image",
+  "scipy",
+  "dotenv",
+  "tqdm"
+]
+
+[tool.setuptools]
+packages = ["src", "experiments"]
+
+[project.scripts]
+core_main = "src.main:main"
+thirds_band_experiment = "experiments.run_band_combination_experiment:run_experiment_for_all_datasets"
+#overlapping_spider_plot = "experiments.create_plot_with_overlapping_magnitude:main"
+test_k = "experiments.test_k_values:main"
+test_k_synth = "experiments.test_k_values_with_synthetic:main"
+spider_plots = "experiments.create_spider_plots_comparison:main"
+generate_tables = "experiments.generate_latex_tables:main"
+thirds_task2 = "experiments.evaluate_magnitude_thirds_task2:main"
+acer_baseline_compare = "experiments.acer_baseline_compare:main"
+abs_diffs = "experiments.thirds_pairwise_abs_differences:main"

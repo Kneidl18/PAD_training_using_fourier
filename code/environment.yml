@@ -1,0 +1,31 @@
+name: bildverarbeitung
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core Python
+  - python=3.11
+  - pip
+
+  # Scientific computing
+  - numpy=2.2.6
+
+  # Machine learning
+  - scikit-learn=1.7.2
+
+  # Image processing
+  - opencv=4.12.*
+  - pillow=11.3.0
+
+  # Visualization
+  - matplotlib=3.10.6
+  - seaborn=0.13.2
+
+  # Utilities
+  - python-dotenv=1.1.0
+
+  # Install remaining packages through pip
+  - pip:
+      # (optional) your local project in editable mode:
+      # - -e .
