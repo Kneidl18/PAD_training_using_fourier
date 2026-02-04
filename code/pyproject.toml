@@ -26,16 +26,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["src", "experiments"]
+packages = ["src"] 
 
 [project.scripts]
 core_main = "src.main:main"
-thirds_band_experiment = "experiments.run_band_combination_experiment:run_experiment_for_all_datasets"
-#overlapping_spider_plot = "experiments.create_plot_with_overlapping_magnitude:main"
-test_k = "experiments.test_k_values:main"
-test_k_synth = "experiments.test_k_values_with_synthetic:main"
-spider_plots = "experiments.create_spider_plots_comparison:main"
-generate_tables = "experiments.generate_latex_tables:main"
-thirds_task2 = "experiments.evaluate_magnitude_thirds_task2:main"
-acer_baseline_compare = "experiments.acer_baseline_compare:main"
-abs_diffs = "experiments.thirds_pairwise_abs_differences:main"
